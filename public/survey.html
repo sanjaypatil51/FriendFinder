@@ -8,12 +8,17 @@
     <!-- Latest compiled and minified CSS & JS -->
      <!-- Chosen for drop down values-->
      <link rel="stylesheet" href=reset.css>
+     <link rel="stylesheet" href=style.css>
+
+     <!-- jQuery -->
+     <script src="https://code.jquery.com/jquery.js"></script>
+
+     <!--choosen-->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
      <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   
-     <!-- jQuery -->
-     <script src="https://code.jquery.com/jquery.js"></script>
+     
      <!--Bootstrap javascript-->
      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -162,14 +167,14 @@
             <br>
 
             <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary submit">Submit</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block fa fa-check-circle submit">Submit</button>
         </form>
 
         <hr>
         <footer class="footer">
             <div class="container">
-                <p><a href="/api/friends">API Friends List</a> | <a
-                        href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+                <p><a href="/api/friends" target="_blank">API Friends List</a> | <a
+                        href="https://github.com/sanjaypatil51/FriendFinder" target="_blank">GitHub Repo</a></p>
             </div>
         </footer>
 
@@ -186,7 +191,7 @@
                 <div class="modal-body">
                     <h2 id="match-name"></h2>
                     <img id="match-img"
-                        src="" alt="">
+                        src="" alt="friend-image">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -249,7 +254,7 @@
                 //console.log(newDiv)
 
                 $("#match-name").text(data.name);
-                $("#match-img").attr("src", data.photo+" class=img-fluid");
+                $("#match-img").attr("src", data.photo);
 
                 // Show the modal with the best match
                 $("#results-modal").modal("toggle");
